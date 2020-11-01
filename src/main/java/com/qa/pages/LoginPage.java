@@ -17,7 +17,7 @@ public class LoginPage extends TestBase {
 	WebElement loginBtn;
 	@FindBy(xpath="//*[contains(text(),\"Sign Up\" )]")
 	WebElement signBtn;
-	@FindBy(xpath="//*[@class=\"background\"]")
+	@FindBy(xpath="//*[@class=\"header item\"]")
 	WebElement crmlogo;
 	//Intialtiztion the page Objects
 	public LoginPage() {
@@ -34,9 +34,9 @@ public class LoginPage extends TestBase {
 	public HomePage login(String user,String pass) throws InterruptedException {
 		username.sendKeys(user);
 		password.sendKeys(pass);
-		//loginBtn.click();
-		JavascriptExecutor js = (JavascriptExecutor)driver;
-    	js.executeScript("arguments[0].click();", loginBtn);
+		loginBtn.click();
+		//JavascriptExecutor js = (JavascriptExecutor)driver;
+    	//js.executeScript("arguments[0].click();", loginBtn);
 		return new HomePage();
 	}
 

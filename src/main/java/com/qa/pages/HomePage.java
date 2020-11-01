@@ -8,15 +8,15 @@ import org.openqa.selenium.support.PageFactory;
 import com.qa.base.TestBase;
 
 public class HomePage extends TestBase {
-	@FindBy(xpath="//span[@class=\"user-display\"]")
+	@FindBy(xpath="//span[@class='user-display']")
 	WebElement userNameLable;
-	@FindBy(xpath="//span[contains(text(),'Contacts') and @class=\"item-text\"]")
+	@FindBy(xpath="//span[contains(text(),'Contacts')]")
 	WebElement contactsLinks;
-	@FindBy(xpath="//span[contains(text(),' New Contacts') and @class=\"item-text\"]")
+	@FindBy(xpath="//button[contains(text(),'New')]")
 	WebElement newcontactsLinks;
-	@FindBy(xpath="//span[contains(text(),'Deals') and @class=\"item-text\"]")
+	@FindBy(xpath="//span[contains(text(),'Deals')]")
 	WebElement dealsLinks;
-	@FindBy(xpath="//span[contains(text(),'Tasks') and @class=\"item-text\"]")
+	@FindBy(xpath="//span[contains(text(),'Tasks')]")
 	WebElement taskLinks;
 	
 	public HomePage() {
@@ -45,8 +45,8 @@ public class HomePage extends TestBase {
 		return new TasksPage();
 	}
 	public void clickOnNewContactLink(){
-		Actions action = new Actions(driver);
-		action.moveToElement(contactsLinks).build().perform();
+		//Actions action = new Actions(driver);
+		//action.moveToElement(contactsLinks).build().perform();
 		newcontactsLinks.click();
 		
 	}

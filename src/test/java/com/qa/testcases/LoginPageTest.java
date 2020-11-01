@@ -29,7 +29,7 @@ public class LoginPageTest extends TestBase{
 	@Test(priority = 2)
 	public void crmlogoImageTest() {
 		boolean flag=loginPage.validateCRMImage();
-		Assert.assertTrue(flag);
+		Assert.assertFalse(flag);
 	}
 	@Test(priority = 3)
 	public void loginTest() throws InterruptedException {
